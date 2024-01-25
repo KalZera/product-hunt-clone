@@ -1,13 +1,12 @@
-import { Header } from "./Header";
+import { Content } from './Content';
+import { Header } from './Header';
 
 export function Home() {
   return (
     <div className="flex flex-col h-[100vh]">
-     <Header/>
+      <Header />
       <hr />
-      <section className="flex-1">
-        <h1>Content</h1>
-      </section>
+      <Content />
       <hr />
       <footer className=" h-[60px]">Footer application</footer>
     </div>
