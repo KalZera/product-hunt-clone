@@ -4,7 +4,7 @@ import {
   createBrowserRouter,
 } from 'react-router-dom';
 import { Home } from '../Pages/Home/HomePage';
-import { SignIn, SignUp } from '@clerk/clerk-react';
+import { SignUp } from '@clerk/clerk-react';
 import { ContentLayout } from './content-layout';
 import { RootLayout } from './root-layout';
 
