@@ -6,8 +6,6 @@ export function ContentLayout() {
   const { userId, isLoaded } = useAuth();
   const navigate = useNavigate();
 
-  console.log('test', userId, isLoaded);
-
   React.useEffect(() => {
     if (!userId) {
       navigate('/sign-in');
