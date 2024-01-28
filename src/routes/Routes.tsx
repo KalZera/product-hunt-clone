@@ -27,9 +27,6 @@ export const Routes = () => {
         },
         {
           path: '/sign-in',
-          element: (
-            <SignIn redirectUrl={'/home'} routing="path" path="/sign-in" />
-          ),
         },
         {
           path: '/sign-up/*',
