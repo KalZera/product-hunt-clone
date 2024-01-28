@@ -1,4 +1,10 @@
+import { useAuth } from '@clerk/clerk-react';
+import { useNavigate } from 'react-router-dom';
+
 export function Header() {
+  const { userId, signOut } = useAuth();
+  const navigate = useNavigate();
+
   return (
     <header className="border rounded-md ">
       <div className="flex m-2 p-2 justify-between items-center">
@@ -21,8 +27,18 @@ export function Header() {
           </button>
         </div>
         <div className="flex justify-around">
-          <button className="btn btn-neutral" type="button">
-            Login
+          <button
+            className="btn btn-neutral"
+            type="button"
+            onClick={() => {
+              if (!userId) {
+                navigate('/sign-in');
+              }
+              signOut();
+              navigate('/sign-in');
+            }}
+          >
+            {userId ? 'Sign Out' : 'Sign In'}
           </button>
           <div className="w-2" />
           <button className="btn btn-neutral" type="button">
