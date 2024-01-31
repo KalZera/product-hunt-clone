@@ -1,48 +1,49 @@
-export interface Product {
-  id: string;
-  title: string;
-  description: string;
-  url: string;
-  upvotes: number;
-  createdAt: Date;
-  updatedAt: Date;
-}
+import { Product } from '../../services/api/Product';
 
-export const products: Product[] = [
+export const mockProducts: Product[] = [
   {
     id: '1',
-    title: 'App 1',
-    description: 'App 1 description',
+    title: 'Innovative Widget',
+    description: 'This is the description for the Innovative Widget.',
     url: 'https://picsum.photos/200/200',
     upvotes: 10,
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    createdAt: new Date('2024-01-31T10:00:00Z'),
+    updatedAt: new Date('2024-01-31T10:30:00Z'),
   },
   {
     id: '2',
-    title: 'App 2',
-    description: 'App 2 description',
+    title: 'TechGizmo Pro',
+    description: 'Description for the TechGizmo Pro goes here.',
     url: 'https://picsum.photos/200/200',
-    upvotes: 10,
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    upvotes: 5,
+    createdAt: new Date('2024-01-31T11:15:00Z'),
+    updatedAt: new Date('2024-01-31T11:45:00Z'),
   },
   {
     id: '3',
-    title: 'App 3',
-    description: 'App 3 description',
+    title: 'Infinite Wonder Device',
+    description: 'The Infinite Wonder Device is an amazing product.',
     url: 'https://picsum.photos/200/200',
-    upvotes: 10,
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    upvotes: 20,
+    createdAt: new Date('2024-01-31T12:30:00Z'),
+    updatedAt: new Date('2024-01-31T13:00:00Z'),
   },
   {
     id: '4',
-    title: 'App 4',
-    description: 'App 4 description',
+    title: 'GadgetMaster 5000',
+    description: 'The description for the GadgetMaster 5000 is provided here.',
     url: 'https://picsum.photos/200/200',
-    upvotes: 10,
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    upvotes: 15,
+    createdAt: new Date('2024-01-31T14:00:00Z'),
+    updatedAt: new Date('2024-01-31T14:30:00Z'),
+  },
+  {
+    id: '5',
+    title: 'Revolutionary Tech Gear',
+    description: 'Check out this awesome Revolutionary Tech Gear.',
+    url: 'https://picsum.photos/200/200',
+    upvotes: 8,
+    createdAt: new Date('2024-01-31T15:00:00Z'),
+    updatedAt: new Date('2024-01-31T15:30:00Z'),
   },
 ];
