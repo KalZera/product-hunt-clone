@@ -3,7 +3,7 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from 'react-router-dom';
-import { Home } from '../Pages/Home/HomePage';
+import { Home } from '../pages/home/HomePage';
 import { SignUp } from '@clerk/clerk-react';
 import { ContentLayout } from './content-layout';
 import { RootLayout } from './root-layout';

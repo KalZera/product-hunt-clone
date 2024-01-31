@@ -7,7 +7,7 @@ export function Header() {
 
   return (
     <header className="border rounded-md ">
-      <div className="flex m-2 p-2 justify-between items-center">
+      <div className="flex p-4 justify-between items-center w-[80%] mx-auto">
         <div className="flex ">
           <input
             type="text"
