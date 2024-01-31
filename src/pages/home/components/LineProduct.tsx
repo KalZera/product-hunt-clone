@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Product } from '../../../services/api/Product';
+import { IconSquareRoundedArrowUpFilled } from '@tabler/icons-react';
 
 interface Props {
   app: Product;
@@ -17,13 +18,10 @@ export function LineProduct({ app }: Props) {
         <p className="text-md">categoria</p>
       </div>
       <div className="gap-2 flex flex-col items-center">
-        <button
-          className="btn btn-accent"
-          onClick={() => setVotes(prev => ++prev)}
-        >
-          Upvote
+        <button className="btn" onClick={() => setVotes(prev => ++prev)}>
+          <IconSquareRoundedArrowUpFilled />
+          <p className="text-md">{votes}</p>
         </button>
-        <p className="text-md">{votes}</p>
       </div>
     </div>
   );
