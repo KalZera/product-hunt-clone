@@ -8,7 +8,9 @@ export function Home() {
       <hr />
       <Content />
       <hr />
-      <footer className=" h-[60px]">Footer application</footer>
+      <footer className=" h-[60px]">
+        Made by Alexander Karuzoo - GitHub @KalZera
+      </footer>
     </div>
   );
 }
