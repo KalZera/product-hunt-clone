@@ -2,7 +2,7 @@ import { mockProducts } from './mockFile';
 import { LineProduct } from './components';
 export function ProductBox() {
   return (
-    <div className="flex-auto max-w-[70%] bg-gray-200">
+    <div className="flex-auto max-w-[70%]">
       <div>
         <p className="text-xl font-bold my-2">The next successful app </p>
       </div>
