@@ -1,6 +1,6 @@
 export function HeaderContent() {
   return (
-    <div className="flex w-full items-center p-4 bg-green-300 rounded-lg">
+    <div className="flex w-full items-center p-4 bg-orange-50 rounded-lg">
       <span className="m-3">Trending Topics</span>
       <div className="flex gap-2">
         <button className="btn btn-accent">AI</button>
