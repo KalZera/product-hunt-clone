@@ -6,7 +6,7 @@ export function Header() {
   const navigate = useNavigate();
 
   return (
-    <header className="border rounded-md ">
+    <header className="">
       <div className="flex p-4 justify-between items-center w-[80%] mx-auto">
         <div className="flex ">
           <input
@@ -28,7 +28,7 @@ export function Header() {
         </div>
         <div className="flex justify-around">
           <button
-            className="btn btn-neutral"
+            className="btn btn-sm btn-primary"
             type="button"
             onClick={() => {
               if (!userId) {
@@ -41,9 +41,19 @@ export function Header() {
             {userId ? 'Sign Out' : 'Sign In'}
           </button>
           <div className="w-2" />
-          <button className="btn btn-neutral" type="button">
-            Register
-          </button>
+          {!userId && (
+            <button
+              className="btn btn-sm btn-neutral"
+              type="button"
+              onClick={() => {
+                if (!userId) {
+                  navigate('/sign-up');
+                }
+              }}
+            >
+              Register
+            </button>
+          )}
         </div>
       </div>
     </header>

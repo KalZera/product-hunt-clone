@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -7,6 +8,16 @@ export default {
   },
   plugins: [require('daisyui')],
   daisyui: {
-    themes: ['light'],
+    themes: [
+      {
+        light: {
+          ...require('daisyui/src/theming/themes')['light'],
+          primary: '#ff8106',
+          '.btn-primary': {
+            color: '#FFF',
+          },
+        },
+      },
+    ],
   },
 };

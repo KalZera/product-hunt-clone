@@ -5,7 +5,7 @@ export function Home() {
   return (
     <div className="flex flex-col h-[100vh]">
       <Header />
-      <hr />
+      <div className="divider my-0.5" />
       <Content />
       <hr />
       <footer className=" h-[60px]">
