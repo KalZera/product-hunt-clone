@@ -1,4 +1,4 @@
-import { mockProducts } from './mockFile';
+import { mockProducts } from '../../services/services/GetProduct';
 import { LineProduct } from './components';
 export function ProductBox() {
   return (

@@ -1,4 +1,4 @@
-import { mockProducts } from './mockFile';
+import { mockProducts } from '../../services/services/GetProduct';
 import { ProductReviewed } from './components';
 export function ReviewedBox() {
   return (
