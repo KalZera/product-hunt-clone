@@ -1,4 +1,4 @@
-import { Product } from '../../services/api/Product';
+import { Product } from '../api/Product';
 
 export const mockProducts: Product[] = [
   {
