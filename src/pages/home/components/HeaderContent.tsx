@@ -2,7 +2,7 @@ import { Categories } from '../../../services/services/GetCategory';
 
 export function HeaderContent() {
   return (
-    <div className="flex w-full items-center p-4 rounded-lg border ">
+    <div className="flex w-full items-center p-4 rounded-lg border mb-2 ">
       <span className="m-3">Trending Topics</span>
       <div className="flex gap-2">
         {Categories.map(category => (
