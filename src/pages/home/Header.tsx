@@ -8,21 +8,21 @@ export function Header() {
   return (
     <header className="">
       <div className="flex p-4 justify-between items-center w-[80%] mx-auto">
-        <div className="flex ">
+        <div className="flex mr-4">
           <input
             type="text"
             placeholder="search"
             className="input input-bordered input-sm"
           />
         </div>
-        <div className="flex flex-1">
-          <button className="btn btn-link" type="button">
+        <div className="flex flex-1 gap-2">
+          <button className="btn btn-sm btn-ghost" type="button">
             Products
           </button>
-          <button className="btn btn-link" type="button">
+          <button className="btn btn-sm btn-ghost" type="button">
             Category
           </button>
-          <button className="btn btn-link" type="button">
+          <button className="btn btn-sm btn-ghost" type="button">
             About
           </button>
         </div>
