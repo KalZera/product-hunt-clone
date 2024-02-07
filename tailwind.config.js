@@ -12,6 +12,7 @@ export default {
       {
         light: {
           ...require('daisyui/src/theming/themes')['light'],
+          fontFamily: 'SF Pro Display, sans-serif',
           primary: '#ff8106',
           '.btn-primary': {
             color: '#FFF',
