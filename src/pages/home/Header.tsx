@@ -1,5 +1,6 @@
 import { useAuth } from '@clerk/clerk-react';
 import { useNavigate } from 'react-router-dom';
+import Logo from '../../assets/logo.svg';
 
 export function Header() {
   const { userId, signOut } = useAuth();
@@ -7,7 +8,11 @@ export function Header() {
 
   return (
     <header className="">
-      <div className="flex p-4 justify-between items-center w-[80%] mx-auto">
+      <div className="flex p-4 justify-between items-center xl:w-[80%] mx-auto w-full">
+        <div className="flex w-[200px]">
+          {/* logo based on https://logoipsum.com/  */}
+          <img src={Logo} alt={'logo'} className="rounded-md" />
+        </div>
         <div className="flex mr-4">
           <input
             type="text"
