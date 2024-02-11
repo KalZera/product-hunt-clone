@@ -8,7 +8,7 @@ export function Home() {
       <div className="divider my-0.5" />
       <Content />
       <hr />
-      <footer className=" h-[60px]">
+      <footer className=" min-h-[80px]">
         Made by Alexander Karuzoo - GitHub @KalZera
       </footer>
     </div>
