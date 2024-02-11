@@ -15,5 +15,6 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'max-lines': ['error', { max: 150 }],
   },
 };
