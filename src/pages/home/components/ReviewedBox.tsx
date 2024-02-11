@@ -1,5 +1,5 @@
-import { mockProducts } from '../../services/services/GetProduct';
-import { ProductReviewed } from './components';
+import { mockProducts } from '../../../services/services/GetProduct';
+import { ProductReviewed } from './ProductReviewed';
 export function ReviewedBox() {
   return (
     <div className="flex-1">

@@ -1,5 +1,5 @@
-import { mockProducts } from '../../services/services/GetProduct';
-import { LineProduct } from './components';
+import { mockProducts } from '../../../services/services/GetProduct';
+import { LineProduct } from './LineProduct';
 export function ProductBox() {
   return (
     <div className="flex-auto lg:max-w-[70%]">

@@ -1,6 +1,4 @@
-import { HeaderContent } from './components';
-import { ProductBox } from './ProductBox';
-import { ReviewedBox } from './ReviewedBox';
+import { HeaderContent, ProductBox, ReviewedBox } from './components';
 export function Content() {
   return (
     <section className="flex-1 xl:w-10/12 mx-auto p-4 w-full">

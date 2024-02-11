@@ -8,8 +8,10 @@ export function Home() {
       <div className="divider my-0.5" />
       <Content />
       <hr />
-      <footer className=" min-h-[80px]">
-        Made by Alexander Karuzoo - GitHub @KalZera
+      <footer className=" h-[60px]">
+        <div className=" flex flex-col content-center items-center">
+          Made by Alexander Karuzoo - GitHub @KalZera
+        </div>
       </footer>
     </div>
   );
