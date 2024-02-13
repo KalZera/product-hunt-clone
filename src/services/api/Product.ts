@@ -5,6 +5,7 @@ export interface Product {
   url: string;
   upvotes: number;
   categories: string[];
+  rating?: number;
   createdAt: Date;
   updatedAt: Date;
 }

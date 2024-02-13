@@ -28,6 +28,7 @@ export const mockProducts: Product[] = [
     url: 'https://picsum.photos/200/200',
     upvotes: 20,
     categories: ['2'],
+    rating: 4.5,
     createdAt: new Date('2024-01-31T12:30:00Z'),
     updatedAt: new Date('2024-01-31T13:00:00Z'),
   },
