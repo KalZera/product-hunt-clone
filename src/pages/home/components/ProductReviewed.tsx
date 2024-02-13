@@ -1,4 +1,5 @@
 import { Product } from '../../../services/api/Product';
+import { IconStar } from '@tabler/icons-react';
 
 interface Props {
   app: Product;
@@ -9,7 +10,14 @@ export function ProductReviewed({ app }: Props) {
       <div className="flex-1">
         <p className="text-xl font-bold">{app.title}</p>
         <p className="text-md">{app.description}</p>
-        <p className="text-md">stars</p>
+        {app.rating ? (
+          <div className="badge badge-outline">
+            <IconStar width={16} />
+            {app.rating}
+          </div>
+        ) : (
+          <div className="badge badge-outline">No rating</div>
+        )}
       </div>
       <div className="">
         <img src={app.url} alt={app.title} className="rounded-md w-12" />
