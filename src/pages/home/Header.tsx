@@ -6,6 +6,12 @@ export function Header() {
   const { userId, signOut } = useAuth();
   const navigate = useNavigate();
 
+  const menu = [
+    { label: 'Products', link: '/products' },
+    { label: 'Category', link: '/category' },
+    { label: 'About', link: '/about' },
+  ];
+
   return (
     <header className="">
       <div className="flex p-4 justify-between items-center xl:w-[80%] mx-auto w-full">
@@ -21,15 +27,11 @@ export function Header() {
           />
         </div>
         <div className="flex flex-1 gap-2">
-          <button className="btn btn-sm btn-ghost" type="button">
-            Products
-          </button>
-          <button className="btn btn-sm btn-ghost" type="button">
-            Category
-          </button>
-          <button className="btn btn-sm btn-ghost" type="button">
-            About
-          </button>
+          {menu.map((item, index) => (
+            <button key={index} className="btn btn-sm btn-ghost" type="button">
+              {item.label}
+            </button>
+          ))}
         </div>
         <div className="flex justify-around">
           <button
