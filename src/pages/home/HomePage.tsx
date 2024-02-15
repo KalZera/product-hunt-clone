@@ -1,5 +1,6 @@
 import { Content } from './Content';
 import { Header } from './Header';
+import { Footer } from './Footer';
 
 export function Home() {
   return (
@@ -7,12 +8,8 @@ export function Home() {
       <Header />
       <div className="divider my-0.5" />
       <Content />
-      <hr />
-      <footer className="">
-        <div className="h-[60px] flex flex-col justify-center items-center">
-          <p className="text-sm">Made by Alexander Karuzoo - GitHub @KalZera</p>
-        </div>
-      </footer>
+      <div className="divider my-0.5" />
+      <Footer />
     </div>
   );
 }
