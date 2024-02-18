@@ -19,7 +19,9 @@ export function ReviewedBox() {
           <div className="flex-1">
             <p className="text-xl font-bold">{mockProducts[0].title}</p>
             <p className="text-md">{mockProducts[0].description}</p>
-            <p className="text-md">+ follow</p>
+            <p className="btn btn-link min-h-[0.5rem] h-[0.5rem] pl-[0px]">
+              + follow
+            </p>
           </div>
         </div>
       </div>
