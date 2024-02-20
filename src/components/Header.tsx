@@ -47,7 +47,7 @@ export function Header() {
           >
             {userId ? 'Sign Out' : 'Sign In'}
           </button>
-          <div className="w-2" />
+          <div className="w-3" />
           {!userId && (
             <button
               className="btn btn-sm btn-neutral"
