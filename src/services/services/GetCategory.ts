@@ -9,7 +9,7 @@ export const Categories: Category[] = [
   },
   {
     id: '2',
-    title: 'IA',
+    title: 'AI',
     createdAt: new Date(),
     updatedAt: new Date(),
   },
@@ -21,7 +21,7 @@ export const Categories: Category[] = [
   },
   {
     id: '4',
-    title: 'Produtividade',
+    title: 'Productivity',
     createdAt: new Date(),
     updatedAt: new Date(),
   },
