@@ -14,7 +14,7 @@ export function Header() {
 
   return (
     <header className="">
-      <div className="flex p-4 justify-between items-center xl:w-[80%] mx-auto w-full">
+      <div className="flex p-3 justify-between items-center xl:w-[80%] mx-auto w-full">
         <div className="flex w-[200px]">
           {/* logo based on https://logoipsum.com/  */}
           <img src={Logo} alt={'logo'} className="rounded-md" />
