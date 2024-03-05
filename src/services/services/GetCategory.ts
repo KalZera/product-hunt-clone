@@ -1,6 +1,6 @@
-import { Category } from '../api/Category';
+import { CategoryDTO } from '../api/Category';
 
-export const Categories: Category[] = [
+export const Categories: CategoryDTO[] = [
   {
     id: '1',
     title: 'Saas',

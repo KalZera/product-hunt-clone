@@ -1,7 +1,7 @@
 import { http, HttpResponse } from 'msw';
-import { Product } from '../api/Product';
+import { ProductDTO } from '../api/Product';
 
-const ProductResponseMock: Product[] = [
+const ProductResponseMock: ProductDTO[] = [
   {
     id: '1',
     title: 'Innovative Widget',
