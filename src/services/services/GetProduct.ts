@@ -1,11 +1,8 @@
-import { v1 } from '../../common/v1';
-import { ProductDTO } from '../api/ProductDTO';
+import { ProductDTO } from '../api/Product';
 
 export const GET_PRODUCT = 'GET_PRODUCT';
-export async function getProduct() {
-  return v1<AddressDTO>({
-    method: 'POST',
-    path: `/addresses`,
-    body: params,
-  });
+export async function getProduct(): Promise<ProductDTO[] | undefined> {
+  const response = await fetch('https://api.example.com/product');
+  const products = await response.json();
+  return products || [];
 }
