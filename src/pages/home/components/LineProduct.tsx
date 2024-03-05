@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { Product } from '../../../services/api/Product';
+import { ProductDTO } from '../../../services/api/Product';
 import { Categories } from '../../../services/services/GetCategory';
 import { IconTriangleFilled } from '@tabler/icons-react';
 
 interface Props {
-  app: Product;
+  app: ProductDTO;
 }
 export function LineProduct({ app }: Props) {
   const [votes, setVotes] = useState<number>(app.upvotes);

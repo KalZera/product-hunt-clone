@@ -1,7 +1,7 @@
 import { http, HttpResponse } from 'msw';
-import { Category } from '../api/Category';
+import { CategoryDTO } from '../api/Category';
 
-const CategoryResponseMock: Category[] = [
+const CategoryResponseMock: CategoryDTO[] = [
   {
     id: '1',
     title: 'Saas',

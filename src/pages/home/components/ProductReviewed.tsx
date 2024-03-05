@@ -1,8 +1,8 @@
-import { Product } from '../../../services/api/Product';
+import { ProductDTO } from '../../../services/api/Product';
 import { IconStar } from '@tabler/icons-react';
 
 interface Props {
-  app: Product;
+  app: ProductDTO;
 }
 export function ProductReviewed({ app }: Props) {
   return (

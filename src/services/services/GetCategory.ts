@@ -1,34 +1,8 @@
-import { Category } from '../api/Category';
+import { CategoryDTO } from '../api/Category';
 
-export const Categories: Category[] = [
-  {
-    id: '1',
-    title: 'Saas',
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-  {
-    id: '2',
-    title: 'AI',
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-  {
-    id: '3',
-    title: 'Marketing',
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-  {
-    id: '4',
-    title: 'Productivity',
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-  {
-    id: '5',
-    title: 'Tech',
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  },
-];
+export const GET_CATEGORY = 'GET_CATEGORY';
+export async function getCategory(): Promise<CategoryDTO[] | undefined> {
+  const response = await fetch('https://api.example.com/category');
+  const categorys = await response.json();
+  return categorys || [];
+}
