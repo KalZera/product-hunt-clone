@@ -1,13 +1,17 @@
-import { mockProducts } from '../../../services/services/GetProduct';
+import { memo } from 'react';
 import { ProductReviewed } from './ProductReviewed';
-export function ReviewedBox() {
+import { ProductDTO } from '../../../services/api/Product';
+import { useGetProducts } from '../../../services/hooks';
+export function ReviewedBoxComponent() {
+  const { data, isLoading } = useGetProducts();
   return (
     <div className="flex-1">
       <div>
         <p className="text-2xl font-bold my-2">Products reviewed by us </p>
       </div>
       <div className="">
-        {mockProducts.map(app => (
+        {isLoading && <p>Loading...</p>}
+        {data?.map((app: ProductDTO) => (
           <ProductReviewed app={app} key={app.id} />
         ))}
       </div>
@@ -17,14 +21,18 @@ export function ReviewedBox() {
       <div>
         <div className="flex gap-2 m-4 items-center">
           <div className="flex-1">
-            <p className="text-xl font-bold">{mockProducts[0].title}</p>
-            <p className="text-md">{mockProducts[0].description}</p>
-            <p className="btn btn-link min-h-[0.5rem] h-[0.5rem] pl-[0px]">
-              + follow
-            </p>
+            <p className="text-xl font-bold">{data?.[0].title}</p>
+            <p className="text-md">{data?.[0].description}</p>
+            {!isLoading && (
+              <p className="btn btn-link min-h-[0.5rem] h-[0.5rem] pl-[0px]">
+                + follow
+              </p>
+            )}
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+export const ReviewedBox = memo(ReviewedBoxComponent);
