@@ -1,16 +1,21 @@
-import { useMemo } from 'react';
-import { mockProducts } from '../../../services/services/GetProduct';
+import { useMemo, memo } from 'react';
 import { LineProduct } from './LineProduct';
 import { EmptyList } from '../../../components';
+import { useGetProducts } from '../../../services/hooks';
 type Props = {
   categorySelected: string | null;
 };
-export function ProductBox({ categorySelected }: Props) {
+export function ProductBoxComponent({ categorySelected }: Props) {
+  const { data, isLoading } = useGetProducts();
   const products = useMemo(() => {
-    return mockProducts.filter(app =>
+    if (!data) return [];
+    return data.filter(app =>
       !categorySelected ? true : app.categories.includes(categorySelected),
     );
-  }, [categorySelected]);
+  }, [categorySelected, data]);
+
+  if (isLoading) return <p>Loading...</p>;
+
   return (
     <div className="flex-auto lg:max-w-[70%]">
       <div>
@@ -35,3 +40,5 @@ export function ProductBox({ categorySelected }: Props) {
     </div>
   );
 }
+
+export const ProductBox = memo(ProductBoxComponent);
