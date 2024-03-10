@@ -8,7 +8,7 @@ export function Content() {
   const { data: categories, isLoading } = useGetCategories();
 
   return (
-    <section className="flex-1 xl:w-10/12 mx-auto p-4 w-full">
+    <section className="flex-1 xl:w-10/12 mx-auto p-2 w-full">
       <HeaderContent>
         {isLoading && <p>Loading...</p>}
         {categories?.map((category: CategoryDTO) => (
