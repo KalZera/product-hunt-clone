@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { ReviewedBox, ProductBox, HeaderContent } from './components';
-import { useGetCategories } from '../../services/hooks';
-import { CategoryDTO } from '../../services/api/Category';
+import { ReviewedBox, ProductBox, HeaderContent } from '../components';
+import { useGetCategories } from '../../../services/hooks';
+import { CategoryDTO } from '../../../services/api/Category';
 
 export function Content() {
   const [categorySelected, setCategory] = useState<string | null>(null);
