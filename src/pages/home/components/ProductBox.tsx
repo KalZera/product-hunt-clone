@@ -2,6 +2,7 @@ import { useMemo, memo } from 'react';
 import { LineProduct } from './LineProduct';
 import { EmptyList } from '../../../components';
 import { useGetProducts } from '../../../services/hooks';
+import { Loading } from '../../../components/Loading';
 type Props = {
   categorySelected: string | null;
 };
@@ -14,7 +15,7 @@ export function ProductBoxComponent({ categorySelected }: Props) {
     );
   }, [categorySelected, data]);
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Loading />;
 
   return (
     <div className="flex-auto lg:max-w-[70%]">

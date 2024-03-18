@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ReviewedBox, ProductBox, HeaderContent } from '../components';
 import { useGetCategories } from '../../../services/hooks';
 import { CategoryDTO } from '../../../services/api/Category';
+import { Loading } from '../../../components/Loading';
 
 export function Content() {
   const [categorySelected, setCategory] = useState<string | null>(null);
@@ -10,7 +11,7 @@ export function Content() {
   return (
     <section className="flex-1 xl:w-10/12 mx-auto p-4 w-full">
       <HeaderContent>
-        {isLoading && <p>Loading...</p>}
+        {isLoading && <Loading />}
         {categories?.map((category: CategoryDTO) => (
           <button
             onClick={() =>

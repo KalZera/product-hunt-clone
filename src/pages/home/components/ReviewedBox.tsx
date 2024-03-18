@@ -2,6 +2,7 @@ import { memo } from 'react';
 import { ProductReviewed } from './ProductReviewed';
 import { ProductDTO } from '../../../services/api/Product';
 import { useGetProducts } from '../../../services/hooks';
+import { Loading } from '../../../components/Loading';
 export function ReviewedBoxComponent() {
   const { data, isLoading } = useGetProducts();
   return (
@@ -10,7 +11,7 @@ export function ReviewedBoxComponent() {
         <p className="text-2xl font-bold my-2">Products reviewed by us </p>
       </div>
       <div className="">
-        {isLoading && <p>Loading...</p>}
+        {isLoading && <Loading />}
         {data?.map((app: ProductDTO) => (
           <ProductReviewed app={app} key={app.id} />
         ))}
