@@ -1,5 +1,5 @@
 interface Props {
-  size: 'sm' | 'md' | 'lg' | 'xl';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
 export const Loading = ({ size = 'md' }: Props) => {
